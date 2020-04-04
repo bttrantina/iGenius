@@ -1,4 +1,3 @@
-![GitHub Logo](bttrantina/iGenius/install/igbtt.png)
 # Repo prepared for iGenius
 
 Challenge was to build application to convert currency based upon rates avaialable from:
@@ -35,7 +34,7 @@ cmd \<enter\>
 Make sure python 3.x is installed:
 python --version \<enter>
 
-Make folder/directory in write accessible drive, using "btt_ig" as an example:
+Make folder/directory in write accessible drive, I am using "btt_ig" as an example:
 
 mkdir btt_ig  \<enter>
 
