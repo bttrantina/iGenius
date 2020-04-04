@@ -27,23 +27,66 @@ Install procedures are wrtten for Windows 10 desktop.
 
 Open a command prompt
 click on search bar and enter:
-    cmd \<enter\>
+cmd \<enter\>
 
-Join the slack! <https://join.slack.com/t/findthemasks/shared_invite/zt-czdjjznp-p8~9oKuXtV_gn7wEBZGGoA>
+Make sure python 3.x is installed:
+python --version \<enter>
 
-- new dev? please look at issues and comment on something to grab it!
-    - Check out the [Getting Started](getting_started.md) doc
-- new data moderator? Join the slack and come to #data!
-- not either? The most useful contribution is identifying more drop off locations and plugging them into the form linked on the public website, so if you don't see an issue here that calls to you, please work on that! Advice on making calls is in [#131](https://github.com/r-pop/findthemasks/issues/131#issuecomment-602746963)
+Make folder/directory in write accessible drive, using "btt_ig" as an example:
 
-## Current setup
+mkdir btt_ig  \<enter>
 
-- The website reads from a google sheet, generates a json blob, which is used to generate static HTML.
+Change directory into that new directory:
 
-## Reading our data to build your own frontend
+cd btt_ig
 
-- Our data file updates every five minutes and can be read from findthemasks.com/data.json.
-- If you read the json directly, you need to ignore entries without an 'x' in the first field. Otherwise, you may publish info hospitals asked to have taken down. Don't do it!
-- If this sounds like too much work, then please use our:
+Pull down install folder from GitHub:
 
-## Embeddable widget of donation sites
+Click on GitHub link to open application repository. 
+Click on "Clone or download" button on the right side of panel.
+Select "Download Zip" option to download package to your machine.
+Copy the "install" folder from the zip file to the directory you created above.
+
+Change directory into the install folder:
+cd install
+
+Execute batch files in order:
+
+	1_startenv.batch.bat 
+	2_install_django.bat
+	3_copy_modules.bat 
+	4_startserver.bat
+
+Start virtual environment:
+
+1_startenv.batch.bat \<enter>
+
+Install Django components:
+
+2_install_django.bat \<enter>
+
+Copy the Convert application to Django location:
+
+3_copy_modules.bat \<enter>
+
+Start the Django server and second command prompt:
+4_startserver.bat \<enter>
+
+## Test the application using curl:
+TEST the API using Curl commands -
+Go to the second command prompt can execute curl test:
+
+5_curl_tests.bat \<enter>
+
+## Test the application using web browser:
+TEST the API from web browser - 
+Open web browser and copy/paste the address below:
+
+http://127.0.0.1:8000/convert/?date=2020-03-31&from=usd&to=jpy&amt=4325.65
+
+Try other dates/currencies/amounts as you like.
+
+## Debug feature: 
+There is also a debug parameter available, add "&debug=1" to your request to see the results.  Debug is automatically turned on if an error occurs, such as an invalid date.
+
+Cheers!
