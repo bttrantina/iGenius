@@ -4,19 +4,31 @@ Challenge was to build application to convert currency based upon rates avaialab
    https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml 
 
 ## Parameters provided include:
-​ : design endpoint to include:
-​ : amount - the amount to convert (e.g. 12.35) 
-​ : src_currency - ISO currency code for the source currency to convert (e.g. EUR, USD, GBP) 
-​ : dest_currency - ISO currency code for the destination currency to convert (e.g. EUR, USD, GBP)
-​ : reference_date - reference date for the exchange rate, in YYYY-MM-DD format
+Design an endpoint to receive:
+   * amount - the amount to convert (e.g. 12.35) 
+   * src_currency - ISO currency code for the source currency to convert (e.g. EUR, USD, GBP) 
+   * dest_currency - ISO currency code for the destination currency to convert (e.g. EUR, USD, GBP)
+   * reference_date - reference date for the exchange rate, in YYYY-MM-DD format
 
 ## Endpoint must:
-​ : Convert the provided amount from src_currency to dest_currency using rates on the given refernce date
-​ : NOTE: this endpoint displays an error if rates are not found for a given reference date
+   * Convert the provided amount from src_currency to dest_currency using rates on the given refernce date
 
-The response should be a JSON object like this: 
- 
+## Response should return the destination currency and the converted currency amount:
+
 {     “amount”: 20.23,     “currency”: ”EUR” }
+
+## Components supporting the application:
+   Python3
+   Django
+   
+## Instructioins to install and set up the application
+
+Install procedures are wrtten for Windows 10 desktop.
+
+Open a command prompt
+click on search bar and enter:
+   cmd <enter>
+
 Join the slack! <https://join.slack.com/t/findthemasks/shared_invite/zt-czdjjznp-p8~9oKuXtV_gn7wEBZGGoA>
 
 - new dev? please look at issues and comment on something to grab it!
