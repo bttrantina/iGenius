@@ -1,9 +1,11 @@
+![GitHub Logo](/install/igbtt.png)
 # Repo prepared for iGenius
 
 Challenge was to build application to convert currency based upon rates avaialable from:
    https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml 
 
 ## Parameters provided include:
+
 Design an endpoint to receive:
    * amount - the amount to convert (e.g. 12.35) 
    * src_currency - ISO currency code for the source currency to convert (e.g. EUR, USD, GBP) 
@@ -11,15 +13,16 @@ Design an endpoint to receive:
    * reference_date - reference date for the exchange rate, in YYYY-MM-DD format
 
 ## Endpoint must:
-   * Convert the provided amount from src_currency to dest_currency using rates on the given refernce date
+
+* Convert the provided amount from src_currency to dest_currency using rates on the given refernce date
 
 ## Response should return the destination currency and the converted currency amount:
 
 {     “amount”: 20.23,     “currency”: ”EUR” }
 
 ## Components supporting the application:
-   Python3
-   Django
+*   Python3
+*   Django
    
 ## Instructioins to install and set up the application
 
@@ -56,7 +59,8 @@ Execute batch files in order:
 	2_install_django.bat
 	3_copy_modules.bat 
 	4_startserver.bat
-
+	5_curl_tests.bat
+	
 Start virtual environment:
 
 1_startenv.batch.bat \<enter>
@@ -85,6 +89,7 @@ Open web browser and copy/paste the address below:
 http://127.0.0.1:8000/convert/?date=2020-03-31&from=usd&to=jpy&amt=4325.65
 
 Try other dates/currencies/amounts as you like.
+if no "date=" parameter is provided, current date is used.
 
 ## Debug feature: 
 There is also a debug parameter available, add "&debug=1" to your request to see the results.  Debug is automatically turned on if an error occurs, such as an invalid date.
