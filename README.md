@@ -27,7 +27,7 @@ Install procedures are wrtten for Windows 10 desktop.
 
 Open a command prompt
 click on search bar and enter:
-   cmd <enter>
+   cmd \<enter\>
 
 Join the slack! <https://join.slack.com/t/findthemasks/shared_invite/zt-czdjjznp-p8~9oKuXtV_gn7wEBZGGoA>
 
