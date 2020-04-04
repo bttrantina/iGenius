@@ -1,4 +1,4 @@
-![GitHub Logo](install/igbtt.png)
+![GitHub Logo](bttrantina/iGenius/install/igbtt.png)
 # Repo prepared for iGenius
 
 Challenge was to build application to convert currency based upon rates avaialable from:
